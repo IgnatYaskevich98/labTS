@@ -1,19 +1,18 @@
 import style from './veterinarianPage.module.css'
-import {ItemsDescription} from "./components/ItemsDescription";
+import {ItemsDescription} from "./itemsDescription/ItemsDescription";
+import dog from "../common/images/smallImage/SecondDog.svg"
 
 export const VeterinarianPage = () => {
     return (
         <div className={style.page}>
             <div className={style.container}>
                 <div className={style.title}>
-                    We couldn`t find a
-                    pharmacy experience
-                    worthy of our best buds-
+                    We couldn`t find a pharmacy experience worthy of our best buds-
                     so we created one
                 </div>
 
                 <div className={style.image}>
-                    Some image
+                    <img src={dog} alt={'some image'}/>
                 </div>
             </div>
 

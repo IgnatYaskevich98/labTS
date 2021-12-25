@@ -12,8 +12,7 @@
     justify-content: start;
     align-items: center;
     width: 40%;
-    height: 700px;
-    border: 1px solid;
+    min-height: 700px;
 }
 .title{
     display: flex;
@@ -21,10 +20,9 @@
     align-items: center;
     flex-wrap: wrap;
     min-height: 40%;
-    width: 80%;
+    width: 70%;
     font-size: 50px;
     font-weight: bold;
-    border: 1px solid;
 }
 .image{
    display: flex;
@@ -32,7 +30,5 @@
     align-items: center;
     height: 40%;
     width: 400px;
-    border: 1px solid;
-
 }
 

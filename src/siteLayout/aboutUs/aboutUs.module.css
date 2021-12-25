@@ -1,0 +1,30 @@
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 800px;
+    background-color: #F6F3FA;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    width: 600px;
+}
+
+.descriptionBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 600px;
+
+}
+
+.forWhat {
+    color: #F7A500;
+    font-size: 22px;
+}
+

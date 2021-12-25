@@ -5,20 +5,16 @@ export const Heading = () => {
 
     return (
         <div className={style.page}>
-            <div className={`${style.container}  ${style.navBarBlock}`}>
+            <div className={style.container}>
                 <a className={style.href} href="/">Veterinarians</a>
                 <a className={style.href} href="/">How it works</a>
                 <a className={style.href} href="/">About us</a>
                 <a className={style.href} href="/">Blog</a>
                 <a className={style.href} href="/">Shop</a>
             </div>
-            <div className={`${style.container}  ${style.symbolBlock}`}>
-                <h1 style={{color: '#F5A61C'}}>mixlab</h1>
-            </div>
-            <div className={style.authorizationBlock}>
-                <div style={{color: '#6F1EAA'}}>
-                    Veterinarian login
-                </div>
+            <h1 className={style.titleH1}>mixlab</h1>
+            <div className={style.authorizationBlock} style={{color: '#6F1EAA'}}>
+                <span style={{marginRight: '10px'}}> Veterinarian login</span>
                 <Button title={'Try Mixlab'}/>
             </div>
         </div>
