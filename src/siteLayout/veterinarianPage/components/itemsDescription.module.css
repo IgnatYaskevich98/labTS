@@ -1,0 +1,21 @@
+.containerDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 90%;
+    min-height: 200px;
+    /*border: 1px solid;*/
+}
+
+.title {
+    color: #6F1EAA;
+}
+
+.hr {
+    width: 100%;
+    margin-top: 25px;
+    background-color: black;
+    border: 1px solid;
+    color: #F7A500;
+}
