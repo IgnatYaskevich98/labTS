@@ -1,0 +1,48 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 600px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    border: 1px solid;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 200px;
+    border: 1px solid;
+}
+
+.authorBlock {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid;
+}
+
+.smallImage {
+    width: 40px;
+    border: 1px solid;
+    margin: 0 10px 0 0;
+}

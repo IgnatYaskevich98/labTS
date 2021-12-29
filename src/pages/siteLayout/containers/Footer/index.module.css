@@ -1,0 +1,31 @@
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 300px;
+    background-color: #48156D;
+}
+
+.container {
+    width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    color: white;
+}
+
+.title {
+    color: #C282F0;
+    margin: 0 0 10px 0;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 150px;
+
+}
