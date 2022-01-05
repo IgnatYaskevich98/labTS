@@ -9,21 +9,43 @@ type NavBarType = {
   totalValue: number;
 };
 export type CountersType = {
-  count: number;
+  value: number;
   id: string;
 };
 
 export const NavBar: FC<NavBarType> = ({
   setCounters,
   counters,
-  totalValue,
+  totalValue = 0,
 }) => {
+  const interactionWithCounter = (action: string) => {
+    return counters.reduce((result: Array<CountersType>, { id, value }) => {
+      let currentCounter;
+
+      if (value % 2 === 0 && action === "even") {
+        currentCounter = { value: value + 1, id: id };
+      } else if (value % 2 !== 0 ?? action === "odd") {
+        currentCounter = { value: value - 1, id: id };
+      } else currentCounter = { id, value };
+
+      result.push(currentCounter);
+      return result;
+    }, []);
+  };
+
   const handleAddCounter = () => {
-    const counterObj = { count: 0, id: v1() };
-    setCounters((state) => [...state, counterObj]);
+    const counterObj = { value: 0, id: v1() };
+    const listCounters = interactionWithCounter("even");
+    listCounters.push(counterObj);
+
+    counters.length === 0
+      ? setCounters((state) => [...state, counterObj])
+      : setCounters(listCounters);
   };
   const handleRemoveLastCounter = () => {
-    setCounters((state) => state.slice(0, state.length - 1));
+    const listCounters = interactionWithCounter("odd");
+    listCounters.pop();
+    setCounters(listCounters);
   };
   const handleResetAllCounters = () => {
     setCounters([]);
