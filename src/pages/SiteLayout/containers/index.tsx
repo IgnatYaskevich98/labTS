@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./index.module.css";
-import { Header } from "../common/Components/Header";
+import { Header } from "../common/Header";
 import { PresentationPage } from "../Presentation";
 import { VeterinarianPage } from "../Veterinarian";
 import { HowItWorks } from "../HowItworks";
@@ -9,7 +9,7 @@ import { Blog } from "../Blog";
 import { Sponsors } from "../Sponsors";
 import { Footer } from "../Footer";
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <div className={style.site}>
       <Header />
@@ -23,5 +23,3 @@ const Layout = () => {
     </div>
   );
 };
-
-export default Layout;

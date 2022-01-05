@@ -1,4 +1,4 @@
-import { Button } from "../common/Components/Button";
+import { Button } from "../../../components/ButtonForLayout";
 
 import coverImage from "../../../static/images/coverImage.svg";
 

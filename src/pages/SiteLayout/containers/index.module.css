@@ -1,6 +1,5 @@
-.app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.site {
+    border: none;
+    margin: 0;
+    min-width: 100vh;
 }

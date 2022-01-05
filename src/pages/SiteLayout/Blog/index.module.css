@@ -46,3 +46,17 @@
     border: 1px solid;
     margin: 0 10px 0 0;
 }
+
+.styleInform{
+    display: flex;
+
+    width: 100%;
+}
+
+.swiper{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
