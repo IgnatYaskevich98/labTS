@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/labTS/static/css/main.f9848593.css",
-    "main.js": "/labTS/static/js/main.dbeccf11.js",
+    "main.css": "/labTS/static/css/main.c92d0897.css",
+    "main.js": "/labTS/static/js/main.c1468b42.js",
     "static/media/coverImage.svg": "/labTS/static/media/coverImage.f5b118c9886d3ee4023b39485c44292b.svg",
     "static/media/star.svg": "/labTS/static/media/star.7e63041544f28245c04fd8608bb55a73.svg",
     "static/media/dog.svg": "/labTS/static/media/dog.aa234d2df71adee548cbe36f84321cd7.svg",
@@ -19,12 +19,12 @@
     "static/media/google.svg": "/labTS/static/media/google.88026485b1054c811674dc2c3fefabfa.svg",
     "static/media/twiter.svg": "/labTS/static/media/twiter.08ba5eb96be806d34810259ba8e7a5b1.svg",
     "index.html": "/labTS/index.html",
-    "static/media/fes.svg": "/labTS/static/media/fes.ded254a3f7284cce421a98dd1752ec40.svg",
-    "main.f9848593.css.map": "/labTS/static/css/main.f9848593.css.map",
-    "main.dbeccf11.js.map": "/labTS/static/js/main.dbeccf11.js.map"
+    "static/media/fecebook.svg": "/labTS/static/media/fecebook.ded254a3f7284cce421a98dd1752ec40.svg",
+    "main.c92d0897.css.map": "/labTS/static/css/main.c92d0897.css.map",
+    "main.c1468b42.js.map": "/labTS/static/js/main.c1468b42.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9848593.css",
-    "static/js/main.dbeccf11.js"
+    "static/css/main.c92d0897.css",
+    "static/js/main.c1468b42.js"
   ]
 }
