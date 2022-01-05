@@ -1,8 +1,8 @@
-import { Button } from "../Button";
+import { Button } from "../../../../components/ButtonForLayout";
 import { NavBar } from "./NavBar/NavBar";
 
 import style from "./index.module.css";
-import commonStyle from "../../styles/commonContainer.module.css";
+import commonStyle from "../styles/commonContainer.module.css";
 
 export const Header = () => {
   const navLinkList = [

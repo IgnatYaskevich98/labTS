@@ -1,4 +1,4 @@
-import { Button } from "../common/Components/Button";
+import { Button } from "../../../components/ButtonForLayout";
 import { Explanation } from "./Explanation/Explanation";
 
 import parrot from "../../../static/images/parrot.svg";
