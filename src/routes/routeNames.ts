@@ -1,5 +1,5 @@
 export const ROUTE_NAMES = {
-  LAYOUT: "/labTS",
+  COUNTEROfCOUNTERS: "/labTS",
   COUNTER: "/labTS/Counter",
-  COUNTEROfCOUNTERS: "/labTS/CounterCounters",
+  LAYOUT: "/labTS/layout",
 };
