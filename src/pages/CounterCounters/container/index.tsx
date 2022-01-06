@@ -11,10 +11,7 @@ export const ContainerCounterCounters = () => {
     setCounters((state) => state.filter((item) => item.id !== id));
   };
 
-  const interactionWithCounter = (
-    currentID: string,
-    action: string = "increment"
-  ) => {
+  const interactionWithCounter = (currentID: string, action: string) => {
     const listCounters = counters.reduce(
       (result: Array<CountersType>, { id, value }) => {
         const numberCheck = value > 0 ? value - 1 : 0;
@@ -37,7 +34,7 @@ export const ContainerCounterCounters = () => {
   };
 
   const handleIncrement = (currentID: string) => {
-    interactionWithCounter(currentID);
+    interactionWithCounter(currentID, "increment");
   };
 
   const handleDecrement = (currentID: string) => {
@@ -63,7 +60,7 @@ export const ContainerCounterCounters = () => {
         totalValue={totalValue}
       />
       <div className={style.counters}>
-        {counters.map(({ id, value }, index) => (
+        {counters.map(({ id, value }) => (
           <Layout
             currentValue={value}
             handleIncrement={handleIncrement}

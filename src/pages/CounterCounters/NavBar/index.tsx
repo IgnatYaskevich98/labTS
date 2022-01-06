@@ -24,7 +24,7 @@ export const NavBar: FC<NavBarType> = ({
 
       if (value % 2 === 0 && action === "even") {
         currentCounter = { value: value + 1, id: id };
-      } else if (value % 2 !== 0 ?? action === "odd") {
+      } else if (value % 2 !== 0 && action === "odd") {
         currentCounter = { value: value - 1, id: id };
       } else currentCounter = { id, value };
 
