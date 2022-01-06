@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/labTS/static/css/main.c92d0897.css",
-    "main.js": "/labTS/static/js/main.60931bc1.js",
+    "main.css": "/labTS/static/css/main.4749f65f.css",
+    "main.js": "/labTS/static/js/main.19a6855f.js",
     "static/media/coverImage.svg": "/labTS/static/media/coverImage.f5b118c9886d3ee4023b39485c44292b.svg",
     "static/media/star.svg": "/labTS/static/media/star.7e63041544f28245c04fd8608bb55a73.svg",
     "static/media/dog.svg": "/labTS/static/media/dog.aa234d2df71adee548cbe36f84321cd7.svg",
@@ -20,11 +20,11 @@
     "static/media/twiter.svg": "/labTS/static/media/twiter.08ba5eb96be806d34810259ba8e7a5b1.svg",
     "index.html": "/labTS/index.html",
     "static/media/fecebook.svg": "/labTS/static/media/fecebook.ded254a3f7284cce421a98dd1752ec40.svg",
-    "main.c92d0897.css.map": "/labTS/static/css/main.c92d0897.css.map",
-    "main.60931bc1.js.map": "/labTS/static/js/main.60931bc1.js.map"
+    "main.4749f65f.css.map": "/labTS/static/css/main.4749f65f.css.map",
+    "main.19a6855f.js.map": "/labTS/static/js/main.19a6855f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c92d0897.css",
-    "static/js/main.60931bc1.js"
+    "static/css/main.4749f65f.css",
+    "static/js/main.19a6855f.js"
   ]
 }
