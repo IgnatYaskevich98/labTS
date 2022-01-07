@@ -10,6 +10,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1220px;
+    height: 70px;
+
 }
 
 .navContainer {

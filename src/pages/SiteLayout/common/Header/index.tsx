@@ -2,7 +2,6 @@ import { Button } from "../../../../components/ButtonForLayout";
 import { NavBar } from "./NavBar/NavBar";
 
 import style from "./index.module.css";
-import commonStyle from "../styles/commonContainer.module.css";
 
 export const Header = () => {
   const navLinkList = [
@@ -15,7 +14,7 @@ export const Header = () => {
 
   return (
     <div className={style.page}>
-      <div className={`${style.container} ${commonStyle.commonContainer}`}>
+      <div className={style.container}>
         <div className={style.navContainer}>
           {navLinkList.map((item) => (
             <NavBar key={item.title} item={item} />

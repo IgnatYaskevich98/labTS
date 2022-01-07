@@ -15,8 +15,8 @@ export const Information: FC<InformationType> = ({
 }) => {
   return (
     <div className={style.container}>
-      <div className={style.image}>
-        <img src={avatar} alt={"some image"} />
+      <div className={style.imageContainer}>
+        <img src={avatar} alt={"some image"} className={style.avatar} />
       </div>
 
       <div className={style.information}>

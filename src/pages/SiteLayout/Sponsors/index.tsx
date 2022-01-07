@@ -5,12 +5,11 @@ import corporateMember from "../../../static/images/sponsors/corporateMember.svg
 import amerCollegeOfApothecaries from "../../../static/images/sponsors/amerCollegeOfApothecaries.svg";
 import mixlabrxCom from "../../../static/images/sponsors/mixlabrxCom.svg";
 import style from "./index.module.css";
-import commonStyle from "../common/styles/commonContainer.module.css";
 
 export const Sponsors = () => {
   return (
     <div className={style.page}>
-      <div className={`${style.container} ${commonStyle.commonContainer}`}>
+      <div className={style.container}>
         <SponsorEmblem image={pcca} />
         <SponsorEmblem image={afpc} />
         <SponsorEmblem image={corporateMember} />

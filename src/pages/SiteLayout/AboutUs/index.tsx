@@ -2,13 +2,12 @@ import { Button } from "../../../components/ButtonForLayout";
 
 import coverImage from "../../../static/images/coverImage.svg";
 
-import commonStyle from "../common/styles/commonContainer.module.css";
 import style from "./index.module.css";
 
 export const About = () => {
   return (
     <div className={style.page}>
-      <div className={`${style.container} ${commonStyle.commonContainer}`}>
+      <div className={style.container}>
         <div className={style.image}>
           <img src={coverImage} alt={"some image"} />
         </div>

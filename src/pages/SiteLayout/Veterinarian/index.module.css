@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 800px;
+    min-height: 700px;
 }
 
 .container {
@@ -11,8 +11,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 40%;
-    min-height: 700px;
+    width: 1220px;
 }
 .title{
     display: flex;
@@ -28,7 +27,9 @@
    display: flex;
     justify-content: center;
     align-items: center;
-    height: 40%;
-    width: 400px;
+}
+.dogImage{
+    height: 377px;
+    width: 280px;
 }
 

@@ -5,13 +5,12 @@ import parrot from "../../../static/images/parrot.svg";
 import dog from "../../../static/images/dog.svg";
 import hare from "../../../static/images/hare.svg";
 
-import commonStyle from "../common/styles/commonContainer.module.css";
 import style from "./index.module.css";
 
 export const HowItWorks = () => {
   return (
     <div className={style.page} style={{ backgroundColor: "#FAF9F6" }}>
-      <div className={`${style.container} ${commonStyle.commonContainer}`}>
+      <div className={style.container}>
         <h1>How it works</h1>
         <div className={style.containerExplanation}>
           <Explanation

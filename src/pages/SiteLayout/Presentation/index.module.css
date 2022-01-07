@@ -1,25 +1,29 @@
+
 .page {
     display: flex;
+    justify-content: center;
+    background:
+            url(../../../static/images/imagesForPresentationCom/leftStars.png) no-repeat left top,
+            url(../../../static/images/imagesForPresentationCom/rightStarPNG.png) no-repeat right top,
+            url(../../../static/images/imagesForPresentationCom/rabbit.png) no-repeat 60% 90%,
+            #FEF7E5;
+    min-height: 700px ;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    width: 100%;
-    min-height: 600px;
+    text-align: center;
+    padding-top: 100px;
+    justify-content: center;
+    width: 1220px;
 }
 
-.titleBlock {
-    position: absolute;
-    margin-right: 34%;
-}
 
 .itemBlock {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /*width: 565px;*/
 }
 
 .href {

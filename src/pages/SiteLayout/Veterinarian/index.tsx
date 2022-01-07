@@ -1,20 +1,20 @@
-import dog from "../../../static/images/SecondDog.svg";
+import { ItemsDescription } from "./ItemsDescription/ItemsDescription";
 
-import commonStyle from "../common/styles/commonContainer.module.css";
+import dog from "../../../static/images/dogForVeterinarian.png";
+
 import style from "./index.module.css";
-import {ItemsDescription} from "./ItemsDescription/ItemsDescription";
 
 export const VeterinarianPage = () => {
   return (
     <div className={style.page}>
-      <div className={`${style.container} ${commonStyle.commonContainer}`}>
+      <div className={style.container}>
         <div className={style.title}>
           We couldn`t find a pharmacy experience worthy of our best buds- so we
           created one
         </div>
 
         <div className={style.image}>
-          <img src={dog} alt={"some image"} />
+          <img src={dog} alt={"some image"} className={style.dogImage} />
         </div>
       </div>
 
