@@ -22,7 +22,7 @@ export const ContainerCounterCounters = () => {
         } else if (id === currentID && action === "decrement") {
           currentCounter = { value: numberCheck, id: currentID };
         } else if (id === currentID && action === "reset") {
-          currentCounter = { id, value: (value = 0) };
+          currentCounter = { id, value: 0 };
         } else currentCounter = { id, value };
 
         result.push(currentCounter);
