@@ -62,13 +62,13 @@ export const ContainerCounterCounters = () => {
       <div className={style.counters}>
         {counters.map(({ id, value }) => (
           <Layout
-            currentValue={value}
             handleIncrement={handleIncrement}
             handleDecrement={handleDecrement}
             handleReset={handleReset}
-            currentID={id}
-            key={id}
             handleRemoveCounter={handleRemoveCounter}
+            currentID={id}
+            currentValue={value}
+            key={id}
           />
         ))}
       </div>

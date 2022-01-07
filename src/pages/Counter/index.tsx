@@ -33,8 +33,8 @@ export const Counter: FC<CounterType> = ({
       handleReset={handleReset}
       handleRemoveCounter={handleRemoveCounter}
       currentValue={value}
-      isShow={isShow}
       currentID={currentId}
+      isShow={isShow}
     />
   );
 };

@@ -23,6 +23,7 @@ export const Layout = memo<LayoutType>(
     handleRemoveCounter,
     currentID = v1(),
   }) => {
+    console.log(currentID);
     return (
       <div className={style.layout}>
         <div className={style.container}>
