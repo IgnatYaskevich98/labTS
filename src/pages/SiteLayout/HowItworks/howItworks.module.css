@@ -13,7 +13,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    min-width: 1220px;
 }
 
 .titleH2 {
@@ -41,6 +40,12 @@
     }
 }
 @media screen and (max-width: 650px) { 
+    .titleH2{
+        font-size: 33px;
+        line-height: 45px;
+    }
+}
+@media screen and (max-width: 650px) {
     .titleH2{
         font-size: 33px;
         line-height: 45px;
