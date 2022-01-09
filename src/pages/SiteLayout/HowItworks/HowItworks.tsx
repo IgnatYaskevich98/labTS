@@ -1,15 +1,15 @@
 import { Explanation } from "./Explanation/Explanation";
 
-import parrot from "../../../static/images/parrot.svg";
-import dog from "../../../static/images/dog.svg";
-import hare from "../../../static/images/hare.svg";
+import parrot from "../../../assets/images/litleParrot.svg";
+import dog from "../../../assets/images/littleDog.svg";
+import hare from "../../../assets/images/litleHare.svg";
 
 import style from "./howItworks.module.css";
 import { Button } from "../../../components/ButtonForLayout";
 
 export const HowItWorks = () => {
   return (
-    <div className={style.page} style={{ backgroundColor: "#FAF9F6" }}>
+    <div className={style.page}>
       <div className={style.container}>
         <h2 className={style.titleH2}>How it works</h2>
         <div className={style.containerExplanation}>

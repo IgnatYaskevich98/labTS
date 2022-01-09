@@ -1,7 +1,7 @@
 import { Information } from "./Information/Information";
 
-import smallImg from "../../../.././src/static/images/smallImage.svg";
-import avatar from "../../../static/images/avatar.svg";
+import smallImg from "../../../assets/images/social/instagram.svg";
+import avatar from "../../../assets/images/avatar.svg";
 
 import style from "./blog.module.css";
 
@@ -19,7 +19,7 @@ export const Blog = () => {
         <Swiper
           className={style.swiper}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
+          spaceBetween={100}
           slidesPerView={2}
           effect={"cards"}
           initialSlide={1}

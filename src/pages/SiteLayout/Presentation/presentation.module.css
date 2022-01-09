@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
     background:
-            url(../../../static/assets/images/leftImg.png) no-repeat left top,
-            url(../../../static/assets/images/rightImg.png) no-repeat right top,
-            url(../../../static/assets/images/centeImg.png) no-repeat 60% 90%,
+            url(../../../assets/images/leftImg.png) no-repeat left top,
+            url(../../../assets/images/rightImg.png) no-repeat right top,
+            url(../../../assets/images/centeImg.png) no-repeat 60% 90%,
             #FEF7E5;
     min-height: 700px ;
 }
@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 1000px) {
     .page {
-        background: #FEF7E5 url(../../../static/assets/images/centeImg.png) no-repeat 50% 85%;
+        background: #FEF7E5 url(../../../assets/images/centeImg.png) no-repeat 50% 85%;
         min-height: 600px;
     }
     .container {

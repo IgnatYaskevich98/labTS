@@ -4,16 +4,16 @@
     align-items: center;
 }
 
-.image {
+.imageBlog {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 360px;
     height: 190px;
     border-radius:  100%;
     background-color: cornsilk;
     margin-bottom: 30px;
 }
+
 
 .title {
     display: flex;

@@ -1,10 +1,10 @@
 import { SponsorEmblem } from "./SponsorEmblem/SponsorEmblem";
 
-import pcca from "../../../static/images/sponsors/PCCA.svg";
-import afpc from "../../../static/images/sponsors/AFPC.svg";
-import corporateMember from "../../../static/images/sponsors/corporateMember.svg";
-import amerCollegeOfApothecaries from "../../../static/images/sponsors/amerCollegeOfApothecaries.svg";
-import mixlabrxCom from "../../../static/images/sponsors/mixlabrxCom.svg";
+import pcca from "../../../assets/images/sponsors/PCCA.svg";
+import afpc from "../../../assets/images/sponsors/AFPC.svg";
+import corporateMember from "../../../assets/images/sponsors/corporateMember.svg";
+import amerCollegeOfApothecaries from "../../../assets/images/sponsors/amerCollegeOfApothecaries.svg";
+import mixlabrxCom from "../../../assets/images/sponsors/mixlabrxCom.svg";
 import style from "./sponsors.module.css";
 
 export const Sponsors = () => {
