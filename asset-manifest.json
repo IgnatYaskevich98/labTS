@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/labTS/static/css/main.7988a662.css",
-    "main.js": "/labTS/static/js/main.53c79039.js",
+    "main.css": "/labTS/static/css/main.20b6af0c.css",
+    "main.js": "/labTS/static/js/main.fa53b3cb.js",
     "static/media/aboutUs.png": "/labTS/static/media/aboutUs.297d96662ebf3a41596a.png",
-    "static/media/dog.svg": "/labTS/static/media/dog.aa234d2df71adee548cbe36f84321cd7.svg",
+    "static/media/littleDog.svg": "/labTS/static/media/littleDog.aa234d2df71adee548cbe36f84321cd7.svg",
     "static/media/avatar.svg": "/labTS/static/media/avatar.97fec8105f2770645ac82606211c2f1b.svg",
-    "static/media/hare.svg": "/labTS/static/media/hare.253e84f3b9cc71e7c086d3282a315232.svg",
-    "static/media/parrot.svg": "/labTS/static/media/parrot.a221c3ecd3a1f7800184f837e0c93b21.svg",
+    "static/media/litleHare.svg": "/labTS/static/media/litleHare.253e84f3b9cc71e7c086d3282a315232.svg",
+    "static/media/litleParrot.svg": "/labTS/static/media/litleParrot.a221c3ecd3a1f7800184f837e0c93b21.svg",
     "static/media/centeImg.png": "/labTS/static/media/centeImg.e1523ae6f0f8aca87f7d.png",
-    "static/media/smallImage.svg": "/labTS/static/media/smallImage.22d0af20d15e496a06ca6f0463cec164.svg",
+    "static/media/instagram.svg": "/labTS/static/media/instagram.22d0af20d15e496a06ca6f0463cec164.svg",
     "static/media/dog.png": "/labTS/static/media/dog.e2736581d20bb41b09d7.png",
     "static/media/corporateMember.svg": "/labTS/static/media/corporateMember.a1478a54b9f2289707cc7f9ce972c157.svg",
     "static/media/rightImg.png": "/labTS/static/media/rightImg.6231aef58af290e8fcf5.png",
@@ -22,11 +22,11 @@
     "static/media/twiter.svg": "/labTS/static/media/twiter.08ba5eb96be806d34810259ba8e7a5b1.svg",
     "index.html": "/labTS/index.html",
     "static/media/fecebook.svg": "/labTS/static/media/fecebook.ded254a3f7284cce421a98dd1752ec40.svg",
-    "main.7988a662.css.map": "/labTS/static/css/main.7988a662.css.map",
-    "main.53c79039.js.map": "/labTS/static/js/main.53c79039.js.map"
+    "main.20b6af0c.css.map": "/labTS/static/css/main.20b6af0c.css.map",
+    "main.fa53b3cb.js.map": "/labTS/static/js/main.fa53b3cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.7988a662.css",
-    "static/js/main.53c79039.js"
+    "static/css/main.20b6af0c.css",
+    "static/js/main.fa53b3cb.js"
   ]
 }
