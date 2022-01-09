@@ -1,6 +1,6 @@
 import { ItemsDescription } from "./ItemsDescription/ItemsDescription";
 
-import dog from "../../../assets/images/dog.png";
+import dog from "../../../static/assets/images/dog.png";
 
 import style from "./veterinarian.module.css";
 

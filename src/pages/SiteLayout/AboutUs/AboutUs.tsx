@@ -1,4 +1,4 @@
-import coverImage from "../../../assets/images/aboutUs.png";
+import coverImage from "../../../static/assets/images/aboutUs.png";
 import { Button } from "../../../components/ButtonForLayout";
 
 import style from "./aboutUs.module.css";
