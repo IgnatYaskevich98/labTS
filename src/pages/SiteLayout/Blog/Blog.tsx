@@ -24,6 +24,7 @@ export const Blog = () => {
           effect={"cards"}
           initialSlide={1}
           centeredSlides={true}
+          loop={true}
         >
           <SwiperSlide>
             <Information
