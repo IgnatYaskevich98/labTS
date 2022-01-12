@@ -1,4 +1,4 @@
-import { Button } from "../../../components/ButtonForLayout";
+import { Button } from "../../../../components/ButtonForLayout";
 import style from "./presentation.module.css";
 
 export const PresentationPage = () => {

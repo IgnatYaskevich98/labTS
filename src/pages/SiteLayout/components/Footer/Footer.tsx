@@ -1,9 +1,9 @@
 import style from "./footer.module.css";
 
-import google from "../../../assets/images/social/google.svg";
-import fes from "../../../assets/images/social/fecebook.svg";
-import inst from "../../../assets/images/social/inst.svg";
-import twiter from "../../../assets/images/social/twiter.svg";
+import google from "../../../../static/images/social/google.svg";
+import fes from "../../../../static/images/social/fecebook.svg";
+import inst from "../../../../static/images/social/inst.svg";
+import twiter from "../../../../static/images/social/twiter.svg";
 
 export const Footer = () => {
   return (

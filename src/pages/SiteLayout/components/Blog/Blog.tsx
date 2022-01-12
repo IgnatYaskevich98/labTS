@@ -1,7 +1,7 @@
 import { Information } from "./Information/Information";
 
-import smallImg from "../../../assets/images/social/instagram.svg";
-import avatar from "../../../assets/images/avatar.svg";
+import smallImg from "../../../../static/images/social/instagram.svg";
+import avatar from "../../../../static/images/avatar.svg";
 
 import style from "./blog.module.css";
 

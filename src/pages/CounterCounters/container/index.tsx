@@ -1,70 +1,105 @@
-import { useState } from "react";
-import { CountersType, NavBar } from "../NavBar";
+import { FC, useCallback, useState } from "react";
+import { NavBar } from "../components/NavBar";
 
 import style from "./index.module.css";
-import { Layout } from "../../Counter/Layout";
+import { CounterLayout } from "../../Counter/CounterLayout/CounterLayout";
+import { v1 } from "uuid";
 
-export const ContainerCounterCounters = () => {
+type CountersType = {
+  value: number;
+  id: string;
+};
+
+export const ContainerCounterCounters: FC = () => {
   const [counters, setCounters] = useState<Array<CountersType>>([]);
 
-  const handleRemoveCounter = (id: string) => {
+  const handleRemoveCounter = useCallback((id: string) => {
     setCounters((state) => state.filter((item) => item.id !== id));
-  };
+  }, []);
 
-  const interactionWithCounter = (currentID: string, action: string) => {
-    const listCounters = counters.reduce(
-      (result: Array<CountersType>, { id, value }) => {
-        const numberCheck = value > 0 ? value - 1 : 0;
-
-        let currentCounter;
-        if (id === currentID && action === "increment") {
-          currentCounter = { value: value + 1, id: currentID };
-        } else if (id === currentID && action === "decrement") {
-          currentCounter = { value: numberCheck, id: currentID };
-        } else if (id === currentID && action === "reset") {
-          currentCounter = { id, value: 0 };
-        } else currentCounter = { id, value };
-
-        result.push(currentCounter);
-        return result;
-      },
-      []
+  const handleIncrementCounter = useCallback((currentID: string) => {
+    setCounters((state) =>
+      state.map((counter) =>
+        counter.id === currentID
+          ? { value: counter.value + 1, id: currentID }
+          : counter
+      )
     );
-    setCounters(listCounters);
-  };
+  }, []);
 
-  const handleIncrement = (currentID: string) => {
-    interactionWithCounter(currentID, "increment");
-  };
+  const handleDecrementCounter = useCallback((currentID: string) => {
+    setCounters((state) =>
+      state.map((counter) =>
+        counter.id === currentID
+          ? { value: counter.value - 1, id: currentID }
+          : counter
+      )
+    );
+  }, []);
 
-  const handleDecrement = (currentID: string) => {
-    interactionWithCounter(currentID, "decrement");
-  };
+  const handleResetCounter = useCallback((currentID: string) => {
+    setCounters((state) =>
+      state.map((counter) =>
+        counter.id === currentID
+          ? { value: (counter.value = 0), id: currentID }
+          : counter
+      )
+    );
+  }, []);
 
-  const handleReset = (currentID: string) => {
-    interactionWithCounter(currentID, "reset");
-  };
-
-  const findTotalValueAllCounters = () => {
+  const findTotalValueAllCounters = useCallback(() => {
     return counters.reduce((result, { value }) => {
       return result + value;
     }, 0);
-  };
-  const totalValue = findTotalValueAllCounters();
+  }, [counters]);
 
+  const handleCreateNewCounter = useCallback(() => {
+    const newCounter = { value: 0, id: v1() };
+
+    setCounters((state) => [...state, newCounter]);
+    setCounters((state) =>
+      state.map((counter) =>
+        counter.value % 2 === 0
+          ? { value: counter.value + 1, id: counter.id }
+          : counter
+      )
+    );
+  }, []);
+
+  const handleRemoveLastCounter = useCallback(() => {
+    setCounters((state) => state.slice(0, -1));
+    setCounters((state) =>
+      state.map((counter) =>
+        counter.value % 2 !== 0
+          ? { value: counter.value - 1, id: counter.id }
+          : counter
+      )
+    );
+  }, [counters]);
+
+  const handleResetAllCounters = useCallback(() => {
+    setCounters([]);
+  }, []);
+
+  const totalValue = findTotalValueAllCounters();
+  const totalCounters = counters.length;
   return (
     <div className={style.counterCounters}>
       <NavBar
-        counters={counters}
-        setCounters={setCounters}
-        totalValue={totalValue}
+        handleCreateNewCounter={handleCreateNewCounter}
+        handleRemoveLastCounter={handleRemoveLastCounter}
+        handleResetAllCounters={handleResetAllCounters}
       />
+      <div className={style.information}>
+        <div>Counters: {totalCounters}</div>
+        <div>Total value: {totalValue}</div>
+      </div>
       <div className={style.counters}>
         {counters.map(({ id, value }) => (
-          <Layout
-            handleIncrement={handleIncrement}
-            handleDecrement={handleDecrement}
-            handleReset={handleReset}
+          <CounterLayout
+            handleIncrement={handleIncrementCounter}
+            handleDecrement={handleDecrementCounter}
+            handleReset={handleResetCounter}
             handleRemoveCounter={handleRemoveCounter}
             currentID={id}
             currentValue={value}

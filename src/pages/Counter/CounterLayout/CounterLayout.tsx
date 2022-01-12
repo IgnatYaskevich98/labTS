@@ -1,7 +1,7 @@
 import { memo } from "react";
 import { Button } from "../../../components/ButtonForCounter";
 
-import style from "./index.module.css";
+import style from "./counterLayout.module.css";
 import { v1 } from "uuid";
 
 type LayoutType = {
@@ -13,7 +13,7 @@ type LayoutType = {
   handleRemoveCounter?: (id: string) => void;
   isShow?: boolean;
 };
-export const Layout = memo<LayoutType>(
+export const CounterLayout = memo<LayoutType>(
   ({
     handleIncrement,
     handleDecrement,
@@ -23,7 +23,6 @@ export const Layout = memo<LayoutType>(
     handleRemoveCounter,
     currentID = v1(),
   }) => {
-    console.log(currentID);
     return (
       <div className={style.layout}>
         <div className={style.container}>

@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 import { ROUTE_NAMES } from "../../routes/routeNames";
 
 import style from "./index.module.css";
+import React from "react";
 
-export const Header = () => {
+export const Header = React.memo(() => {
   return (
     <div className={style.container}>
       <NavLink className={style.navBar} to={ROUTE_NAMES.COUNTEROfCOUNTERS}>
@@ -18,4 +19,4 @@ export const Header = () => {
       </NavLink>
     </div>
   );
-};
+});
