@@ -67,15 +67,18 @@ export const ContainerCounterCounters: FC = () => {
   }, []);
 
   const handleRemoveLastCounter = useCallback(() => {
-    setCounters((state) => state.slice(0, -1));
-    setCounters((state) =>
-      state.map((counter) =>
+    setCounters((state) => {
+      const stateCopy = [...state];
+
+      stateCopy.pop();
+
+      return stateCopy.map((counter) =>
         counter.value % 2 !== 0
           ? { value: counter.value - 1, id: counter.id }
           : counter
-      )
-    );
-  }, [counters]);
+      );
+    });
+  }, []);
 
   const handleResetAllCounters = useCallback(() => {
     setCounters([]);
