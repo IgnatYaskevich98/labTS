@@ -6,14 +6,12 @@ import { Counter } from "../pages/Counter/containers/Counter";
 import { CounterCounters } from "../pages/CounterCounters";
 
 export const Router = () => {
+  const { COUNTEROfCOUNTERS, COUNTER, LAYOUT } = ROUTE_NAMES;
   return (
     <Routes>
-      <Route
-        path={ROUTE_NAMES.COUNTEROfCOUNTERS}
-        element={<CounterCounters />}
-      />
-      <Route path={ROUTE_NAMES.COUNTER} element={<Counter isShow={false} />} />
-      <Route path={ROUTE_NAMES.LAYOUT} element={<LayoutPage />} />
+      <Route path={COUNTEROfCOUNTERS} element={<CounterCounters />} />
+      <Route path={COUNTER} element={<Counter isShow={false} />} />
+      <Route path={LAYOUT} element={<LayoutPage />} />
     </Routes>
   );
 };
