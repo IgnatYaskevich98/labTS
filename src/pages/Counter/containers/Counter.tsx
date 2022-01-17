@@ -1,5 +1,5 @@
 import { FC, useCallback, useState } from "react";
-import { CounterLayout } from "./CounterLayout/CounterLayout";
+import { CounterView } from "../CounterLayout/CounterView";
 import { v1 } from "uuid";
 
 type CounterType = {
@@ -27,7 +27,7 @@ export const Counter: FC<CounterType> = ({
     setValue(0);
   }, []);
   return (
-    <CounterLayout
+    <CounterView
       handleIncrement={handleIncrement}
       handleDecrement={handleDecrement}
       handleReset={handleReset}

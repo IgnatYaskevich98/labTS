@@ -2,19 +2,46 @@ import { FC, useCallback, useState } from "react";
 import { NavBar } from "../components/NavBar";
 
 import style from "./index.module.css";
-import { CounterLayout } from "../../Counter/CounterLayout/CounterLayout";
-import { v1 } from "uuid";
+import { CounterView } from "../../Counter/CounterLayout/CounterView";
+import { v1 as uuidV1 } from "uuid";
 
 type CountersType = {
   value: number;
   id: string;
 };
 
-export const ContainerCounterCounters: FC = () => {
+export const CountersManagerContainer: FC = () => {
   const [counters, setCounters] = useState<Array<CountersType>>([]);
 
-  const handleRemoveCounter = useCallback((id: string) => {
-    setCounters((state) => state.filter((item) => item.id !== id));
+  const handleCreateNewCounter = useCallback(() => {
+    const newCounter = { value: 0, id: uuidV1() };
+
+    setCounters((state) => {
+      let newState = [...state, newCounter];
+
+      return newState.map((counter) =>
+        counter.value % 2 === 0
+          ? { ...counter, value: counter.value + 1 }
+          : counter
+      );
+    });
+  }, []);
+
+  const handleRemoveLastCounter = useCallback(() => {
+    setCounters((state) => {
+      const stateCopy = [...state];
+      stateCopy.pop();
+
+      return stateCopy.map((counter) =>
+        counter.value % 2 !== 0
+          ? { ...counter, value: counter.value - 1 }
+          : counter
+      );
+    });
+  }, []);
+
+  const handleResetAllCounters = useCallback(() => {
+    setCounters([]);
   }, []);
 
   const handleIncrementCounter = useCallback((currentID: string) => {
@@ -30,7 +57,7 @@ export const ContainerCounterCounters: FC = () => {
   const handleDecrementCounter = useCallback((currentID: string) => {
     setCounters((state) =>
       state.map((counter) =>
-        counter.id === currentID
+        counter.id === currentID && counter.value > 0
           ? { value: counter.value - 1, id: currentID }
           : counter
       )
@@ -53,35 +80,8 @@ export const ContainerCounterCounters: FC = () => {
     }, 0);
   }, [counters]);
 
-  const handleCreateNewCounter = useCallback(() => {
-    const newCounter = { value: 0, id: v1() };
-
-    setCounters((state) => [...state, newCounter]);
-    setCounters((state) =>
-      state.map((counter) =>
-        counter.value % 2 === 0
-          ? { value: counter.value + 1, id: counter.id }
-          : counter
-      )
-    );
-  }, []);
-
-  const handleRemoveLastCounter = useCallback(() => {
-    setCounters((state) => {
-      const stateCopy = [...state];
-
-      stateCopy.pop();
-
-      return stateCopy.map((counter) =>
-        counter.value % 2 !== 0
-          ? { value: counter.value - 1, id: counter.id }
-          : counter
-      );
-    });
-  }, []);
-
-  const handleResetAllCounters = useCallback(() => {
-    setCounters([]);
+  const handleRemoveCounter = useCallback((id: string) => {
+    setCounters((state) => state.filter((item) => item.id !== id));
   }, []);
 
   const totalValue = findTotalValueAllCounters();
@@ -99,7 +99,7 @@ export const ContainerCounterCounters: FC = () => {
       </div>
       <div className={style.counters}>
         {counters.map(({ id, value }) => (
-          <CounterLayout
+          <CounterView
             handleIncrement={handleIncrementCounter}
             handleDecrement={handleDecrementCounter}
             handleReset={handleResetCounter}
