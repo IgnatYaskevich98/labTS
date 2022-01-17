@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/labTS/static/css/main.8facc584.css",
-    "main.js": "/labTS/static/js/main.168bf0bc.js",
+    "main.css": "/labTS/static/css/main.59fe8d71.css",
+    "main.js": "/labTS/static/js/main.41e2737a.js",
     "static/media/aboutUs.png": "/labTS/static/media/aboutUs.297d96662ebf3a41596a.png",
     "static/media/littleDog.svg": "/labTS/static/media/littleDog.aa234d2df71adee548cbe36f84321cd7.svg",
     "static/media/avatar.svg": "/labTS/static/media/avatar.97fec8105f2770645ac82606211c2f1b.svg",
@@ -22,11 +22,11 @@
     "static/media/twiter.svg": "/labTS/static/media/twiter.08ba5eb96be806d34810259ba8e7a5b1.svg",
     "index.html": "/labTS/index.html",
     "static/media/fecebook.svg": "/labTS/static/media/fecebook.ded254a3f7284cce421a98dd1752ec40.svg",
-    "main.8facc584.css.map": "/labTS/static/css/main.8facc584.css.map",
-    "main.168bf0bc.js.map": "/labTS/static/js/main.168bf0bc.js.map"
+    "main.59fe8d71.css.map": "/labTS/static/css/main.59fe8d71.css.map",
+    "main.41e2737a.js.map": "/labTS/static/js/main.41e2737a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8facc584.css",
-    "static/js/main.168bf0bc.js"
+    "static/css/main.59fe8d71.css",
+    "static/js/main.41e2737a.js"
   ]
 }
