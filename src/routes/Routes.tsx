@@ -3,13 +3,19 @@ import { Route, Routes } from "react-router-dom";
 import { ROUTE_NAMES } from "./routeNames";
 import { LayoutPage } from "../pages/SiteLayout/LayoutPage";
 import { Counter } from "../pages/Counter/containers/Counter";
-import { CounterCounters } from "../pages/CounterCounters";
+import { CountersManagerContainerRedux } from "../pages/CounterCountersWithRedux/containers/CountersManagerContainerRedux";
+import { CountersManagerContainer } from "../pages/CounterCouters/containers/CountersManagerCountainer";
 
 export const Router = () => {
-  const { COUNTEROfCOUNTERS, COUNTER, LAYOUT } = ROUTE_NAMES;
+  const { COUNTER_MANAGER_REDUX, COUNTER_MANAGER, COUNTER, LAYOUT } =
+    ROUTE_NAMES;
   return (
     <Routes>
-      <Route path={COUNTEROfCOUNTERS} element={<CounterCounters />} />
+      <Route
+        path={COUNTER_MANAGER_REDUX}
+        element={<CountersManagerContainerRedux />}
+      />
+      <Route path={COUNTER_MANAGER} element={<CountersManagerContainer />} />
       <Route path={COUNTER} element={<Counter isShow={false} />} />
       <Route path={LAYOUT} element={<LayoutPage />} />
     </Routes>
