@@ -5,14 +5,18 @@ import { BrowserRouter } from "react-router-dom";
 import { Router } from "./routes/Routes";
 import "./index.css";
 import { MainLayout } from "./components/MainLayout";
+import { Provider } from "react-redux";
+import { store } from "./store/configureStore";
 
 ReactDOM.render(
   <StrictMode>
-    <BrowserRouter>
-      <MainLayout>
-        <Router />
-      </MainLayout>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <MainLayout>
+          <Router />
+        </MainLayout>
+      </BrowserRouter>
+    </Provider>
   </StrictMode>,
   document.getElementById("root")
 );

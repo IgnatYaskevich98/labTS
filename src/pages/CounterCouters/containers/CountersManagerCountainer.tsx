@@ -1,9 +1,10 @@
 import { FC, useCallback, useState } from "react";
 import { NavBar } from "../components/NavBar";
 
-import style from "./index.module.css";
 import { CounterView } from "../../Counter/CounterLayout/CounterView";
 import { v1 as uuidV1 } from "uuid";
+
+import style from "./style.module.css";
 
 type CountersType = {
   value: number;
@@ -98,6 +99,7 @@ export const CountersManagerContainer: FC = () => {
         <div>Total value: {totalValue}</div>
       </div>
       <div className={style.counters}>
+        {counters.length < 1 && <h1>Without Redux</h1>}
         {counters.map(({ id, value }) => (
           <CounterView
             handleIncrement={handleIncrementCounter}
