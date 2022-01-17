@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { ROUTE_NAMES } from "./routeNames";
 import { LayoutPage } from "../pages/SiteLayout/LayoutPage";
-import { Counter } from "../pages/Counter";
+import { Counter } from "../pages/Counter/containers/Counter";
 import { CounterCounters } from "../pages/CounterCounters";
 
 export const Router = () => {

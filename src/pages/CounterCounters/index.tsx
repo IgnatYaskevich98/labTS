@@ -1,6 +1,6 @@
 import React from "react";
-import { ContainerCounterCounters } from "./container";
+import { CountersManagerContainer } from "./containers/CountersManagerContainer";
 
 export const CounterCounters = () => {
-  return <ContainerCounterCounters />;
+  return <CountersManagerContainer />;
 };

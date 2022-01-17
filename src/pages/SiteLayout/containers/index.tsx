@@ -1,14 +1,14 @@
 import React from "react";
 import style from "./index.module.css";
 
-import { Header } from "../common/Header";
-import { PresentationPage } from "../Presentation/Presentation";
-import { VeterinarianPage } from "../Veterinarian/Veterinarian";
-import { HowItWorks } from "../HowItworks/HowItworks";
-import { About } from "../AboutUs/AboutUs";
-import { Blog } from "../Blog/Blog";
-import { Sponsors } from "../Sponsors/Sponsors";
-import { Footer } from "../Footer/Footer";
+import { Header } from "../components/common/Header";
+import { PresentationPage } from "../components/Presentation/Presentation";
+import { VeterinarianPage } from "../components/Veterinarian/Veterinarian";
+import { HowItWorks } from "../components/HowItworks/HowItworks";
+import { About } from "../components/AboutUs/AboutUs";
+import { Blog } from "../components/Blog/Blog";
+import { Sponsors } from "../components/Sponsors/Sponsors";
+import { Footer } from "../components/Footer/Footer";
 
 export const Layout = () => {
   return (
