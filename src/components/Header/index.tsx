@@ -8,17 +8,16 @@ export const Header = React.memo(() => {
   return (
     <div className={style.container}>
       <NavLink className={style.navBar} to={ROUTE_NAMES.COUNTER_MANAGER_REDUX}>
-        manager counters redux
+        Manager counters redux
       </NavLink>
       <NavLink className={style.navBar} to={ROUTE_NAMES.COUNTER_MANAGER}>
-        manager counters
+        Manager counters
       </NavLink>
       <NavLink className={style.navBar} to={ROUTE_NAMES.COUNTER}>
-        counter
+        Counter
       </NavLink>
-
       <NavLink className={style.navBar} to={ROUTE_NAMES.LAYOUT}>
-        layout
+        Layout
       </NavLink>
     </div>
   );
