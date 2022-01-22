@@ -19,6 +19,9 @@ export const Header = React.memo(() => {
       <NavLink className={style.navBar} to={ROUTE_NAMES.LAYOUT}>
         Layout
       </NavLink>
+      <NavLink className={style.navBar} to={ROUTE_NAMES.TODO}>
+        todo
+      </NavLink>
     </div>
   );
 });
