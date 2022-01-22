@@ -7,10 +7,8 @@ import {
   useState,
 } from "react";
 
-import Paper from "@mui/material/Paper/Paper";
-import CancelIcon from "@mui/icons-material/Cancel";
-import SaveIcon from "@mui/icons-material/Save";
-import TextField from "@mui/material/TextField/TextField";
+import { icons } from "../../../../static/iconsForTodo/icons";
+import { TextField, Paper } from "@mui/material";
 import style from "./styles.module.scss";
 
 type TaskType = {
@@ -25,7 +23,7 @@ export const TaskEditMode: FC<TaskType> = memo(
 
     const onChangeTitle = useCallback(
       (event: ChangeEvent<HTMLInputElement>) => {
-        setTaskName(event.currentTarget.value);
+        setTaskName(event.target.value);
       },
       [setTaskName]
     );
@@ -57,8 +55,8 @@ export const TaskEditMode: FC<TaskType> = memo(
             />
           </div>
           <div className={style.navBar}>
-            <SaveIcon onClick={handleSaveChanges} />
-            <CancelIcon onClick={handleCancel} />
+            <icons.SaveIcon onClick={handleSaveChanges} />
+            <icons.CancelIcon onClick={handleCancel} />
           </div>
         </Paper>
       </div>

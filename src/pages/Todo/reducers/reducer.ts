@@ -37,7 +37,7 @@ export const taskManagerReducer = handleActions<
 
       return { ...state, tasksList };
     },
-    [actions.TASK_IS_DONE]: (state, { payload: id }) => {
+    [actions.EXECUTE_TASK]: (state, { payload: id }) => {
       const tasksList = [...state.tasksList];
       const updateTaskList = tasksList.map((task) =>
         task.id === id ? { ...task, isDone: !task.isDone } : task
@@ -46,26 +46,29 @@ export const taskManagerReducer = handleActions<
     },
     [actions.TURN_EDIT_MODE]: (state, { payload: id }) => {
       const tasksList = [...state.tasksList];
-      const updateTaskList = tasksList.map((task) =>
-        task.id === id ? { ...task, editMode: !task.editMode } : task
-      );
-      return { ...state, tasksList: updateTaskList };
+
+      const foundTask = tasksList.find((task) => task.id === id);
+      if (foundTask) foundTask.editMode = !foundTask.editMode;
+
+      return { ...state, tasksList };
     },
     [actions.CANCEL_CHANGES]: (state, { payload: id }) => {
       const tasksList = [...state.tasksList];
-      const updateTaskList = tasksList.map((task) =>
-        task.id === id ? { ...task, editMode: !task.editMode } : task
-      );
-      return { ...state, tasksList: updateTaskList };
+
+      const foundTask = tasksList.find((task) => task.id === id);
+      if (foundTask) foundTask.editMode = !foundTask.editMode;
+
+      return { ...state, tasksList };
     },
-    [actions.CHANGE_TASK]: (state, { payload }) => {
+    [actions.SAVE_CHANGES]: (state, { payload }) => {
       const tasksList = [...state.tasksList];
-      const updateTaskList = tasksList.map((task) =>
-        task.id === payload.currentID
-          ? { ...task, editMode: !task.editMode, title: payload.title }
-          : task
-      );
-      return { ...state, tasksList: updateTaskList };
+
+      const foundTask = tasksList.find((task) => task.id === payload.currentID);
+      if (foundTask) {
+        foundTask.editMode = !foundTask.editMode;
+        foundTask.title = payload.title;
+      }
+      return { ...state, tasksList: tasksList };
     },
   },
   initialState

@@ -31,7 +31,7 @@ export const TodoContainer = () => {
 
   const handleIsDone = useCallback(
     (currentID: string) => {
-      dispatch(actions.TASK_IS_DONE(currentID));
+      dispatch(actions.EXECUTE_TASK(currentID));
     },
     [dispatch]
   );
@@ -50,7 +50,7 @@ export const TodoContainer = () => {
 
   const handleChangeTask = useCallback(
     (currentID: string, title: string) => {
-      dispatch(actions.CHANGE_TASK({ currentID, title }));
+      dispatch(actions.SAVE_CHANGES({ currentID, title }));
     },
     [dispatch]
   );

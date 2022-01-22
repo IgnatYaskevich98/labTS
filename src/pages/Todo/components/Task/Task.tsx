@@ -1,9 +1,9 @@
 import { FC, memo } from "react";
 
 import Checkbox from "@mui/material/Checkbox";
-import Paper from "@mui/material/Paper/Paper";
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
+import { Paper } from "@mui/material";
+import { icons } from "../../../../static/iconsForTodo/icons";
+
 import style from "./styles.module.scss";
 
 type TaskType = {
@@ -29,8 +29,8 @@ export const Task: FC<TaskType> = memo(
 
           <div className={style.taskName}>{title}</div>
           <div className={style.navBar}>
-            <EditIcon onClick={() => handleEditMode(id)} />
-            <DeleteIcon onClick={() => handleRemoveTask(id)} />
+            <icons.EditIcon onClick={() => handleEditMode(id)} />
+            <icons.DeleteIcon onClick={() => handleRemoveTask(id)} />
           </div>
         </Paper>
       </div>

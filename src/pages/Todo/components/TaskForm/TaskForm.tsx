@@ -7,11 +7,8 @@ import {
   useState,
 } from "react";
 
-import TextField from "@mui/material/TextField/TextField";
-import Button from "@mui/material/Button";
-import AddIcon from "@mui/icons-material/Add";
-import Alert from "@mui/material/Alert";
-
+import { Button, Alert, TextField } from "@mui/material";
+import { icons } from "../../../../static/iconsForTodo/icons";
 import style from "./styles.module.scss";
 
 type TaskFormType = {
@@ -22,7 +19,7 @@ export const TaskForm: FC<TaskFormType> = memo(({ handleCreateNewTask }) => {
   const [error, setError] = useState(false);
   const onChangeTitle = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
-      setTaskName(event.currentTarget.value);
+      setTaskName(event.target.value);
     },
     [setTaskName]
   );
@@ -31,14 +28,11 @@ export const TaskForm: FC<TaskFormType> = memo(({ handleCreateNewTask }) => {
     (event: MouseEvent) => {
       event.preventDefault();
       if (taskName.length >= 4) {
+        setError(false);
         handleCreateNewTask(taskName);
         setTaskName("");
       } else {
-        setError(() => true);
-        setTimeout(() => {
-          setError(() => false);
-        }, 4000);
-        clearTimeout();
+        setError(true);
       }
     },
     [handleCreateNewTask, taskName]
@@ -62,7 +56,7 @@ export const TaskForm: FC<TaskFormType> = memo(({ handleCreateNewTask }) => {
             className={style.button}
             size={"medium"}
             variant="contained"
-            endIcon={<AddIcon />}
+            endIcon={<icons.AddIcon />}
             color={"secondary"}
             onClick={handleCreateTask}
           >
